@@ -4,18 +4,19 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+        <title>Construire des applications API-centric avec Symfony</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+        <meta name="description" content="La nouvelle manière de construire les applications web.">
+        <meta name="author" content="Kévin Dunglas">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/league.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -38,342 +39,815 @@
 
 		<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
+                <section data-background="img/cloud.jpg">
+                    <h2>À la découverte de</h2>
+                    <h1 style="font-size: 210px">API Platform</h1>
+                </section>
 
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
+                <section>
+                    <div style="float: left; width: 60%">
+                        <h2>Kévin Dunglas</h2>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
+                        <ul>
+                            <li>Fondateur <a href="http://les-tilleuls.coop">Les-Tilleuls.coop</a></li>
+                            <li><a href="http://symfony.com">Symfony</a> core-team</li>
+                            <li>
+                                <a href="http://twitter.com/dunglas"><i class="fa fa-twitter"></i></a> <a href="http://github.com/dunglas"><i class="fa fa-github"></i></a> @dunglas
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="float: left; width: 40%">
+                        <img alt="Les-Tilleuls.coop" src="img/les-tilleuls.png">
+                    </div>
+                </section>
 
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
-				</section>
+                <section>
+                    <section>
+                        <h2>1985</h2>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
+                        <img alt="3615 ulla" src="img/3615ulla.jpg" height="550">
+                    </section>
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
+                    <section>
+                        <h2>2000</h2>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+                        <img alt="Le web" src="img/web.png" height="550" style="background-color: white">
+                    </section>
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+                    <section>
+                        Twig, Assetic, Composant Form, CSRF...
+                        <h3>L'édition standard de Symfony est toujours orientée pour développer ce type d'applications.</h3>
+                    </section>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+                    <section>
+                        <h1>2015 ?</h1>
+                    </section>
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
+                    <section>
+                        <img src="img/api-centric.png" height="600" style="background-color: white">
+                    </section>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
+                    <section>
+                        <h1>API-centric</h1>
+                        <p>Ils exposeront et consommeront vos données :</p>
+                        <ul>
+                            <li class="fragment">SPA et sites responsifs</li>
+                            <li class="fragment">applis mobiles natives</li>
+                            <li class="fragment">applis lourdes Linux / Windows / Mac</li>
+                            <li class="fragment"><strong>clients, fournisseurs, partenaires</strong></li>
+                            <li class="fragment">moteurs de recherche, aggrégateurs, annuaires, comparateurs de prix, places de marché...</li>
+                        </ul>
+                    </section>
+                </section>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
+                <section>
+                    <section>
+                        <h1>API : état de l'art</h1>
+                    </section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
+                    <section>
+                        <h1>JSON</h1>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
+                        <p><i>JavaScript Object Notation</i></p>
 
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-				</section>
+                        <ul>
+                            <li class="fragment">Léger : efficace pour le mobile</li>
+                            <li class="fragment">Standard (RFC 7159, ECMA-404)</li>
+                            <li class="fragment">Fonctionne partout</li>
+                        </ul>
+                    </section>
 
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
+                    <section>
+                        <h1>REST</h1>
 
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
+                        <p><i>REpresentational State Transfer</i></p>
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+                        <ul>
+                            <li class="fragment">Style d'architecture orienté ressources</li>
+                            <li class="fragment">Utilisation du protocole et des verbes HTTP</li>
+                            <li class="fragment">Contrairement à RPC ou à SOAP, n'est ni un format, ni un protocole</li>
+                        </ul>
+                    </section>
 
-    var nodes = document.querySelectorAll( selector );
+                    <section>
+                        <h1>HATEOAS</h1>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+                        <p><i>Hypermedia as the Engine of Application State</i></p>
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
+                        <ul>
+                            <li class="fragment">Hypermédia : IRI comment identifiants des ressources</li>
+                            <li class="fragment">Utilisation des types MIME</li>
+                            <li class="fragment">Mouvement Linked Data (W3C)</li>
+                            <li class="fragment"><b>Clients génériques</b></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h1>Vocabulaires</h1>
+
+                        <ul>
+                            <li class="fragment">Sens commun aux données de différentes sources</li>
+                            <li class="fragment">Indispensables à la contextualisation par les machines</li>
+                            <li class="fragment">Composés de classes, propriétés et relations</li>
+                            <li class="fragment"><b>Schema.org</b>, GoodRelations, FOAF, Dublin Core...</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section><h1>Formats</h1></section>
+
+                    <section data-background="img/formats.png"></section>
+
+                    <section data-background="img/man_housework.jpg">
+                        <h1 style="color: black; background-color: rgba(255, 255, 255, 0.6)">Un peu de ménage</h1>
+                    </section>
+
+                    <section>
+                        <h1>JSON-LD</h1>
+
+                        <p><i>JSON for Linked Data</i></p>
+
+                        <ul>
+                            <li class="fragment">Standard : recommandation du W3C (depuis 2014)</li>
+                            <li class="fragment">Facile à prendre en main : ressemble à la manière "classique"</li>
+                            <li class="fragment">Adopté par Gmail, GitHub, la BBC, Microsoft, US gov...</li>
+                            <li class="fragment">Compatible avec les technologies du web sémantique (RDF, SPARQL, triple store...)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h1>Schema.org</h1>
+
+                        <ul>
+                            <li class="fragment">Défini un grand nombre d'éléments courants : personnes, publications, évènement, produits, avis, élèments chimiques et médicaux...</li>
+                            <li class="fragment">Créé et pris en charge par par Google, Bing, Yahoo! et Yandex</li>
+                            <li class="fragment">Adoption massive, maintenant sous l'égide du W3C (Web schemas group)</li>
+                            <li class="fragment">Représentable sous forme de HTML (microdata), RDF (RDFa) et <b>JSON-LD</b></li>
+                            <li class="fragment"><b>Extensible</b></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h1>Hydra</h1>
+
+                        <ul>
+                            <li class="fragment">Permet de décrire des API REST en JSON-LD</li>
+                            <li class="fragment">= support de l'écriture</li>
+                            <li class="fragment">= API auto-découvrable</li>
+                            <li class="fragment">= collections avec pagination</li>
+                            <li class="fragment">Draft W3C (Work In Progress)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Ce que ça donne</h2>
+
+                        <pre><code>
+{
+    "@context": "http://schema.org",
+    "@type": "Event",
+    "location": {
+        "@type": "Place",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Denver",
+            "addressRegion": "CO",
+            "postalCode": "80209",
+            "streetAddress": "7 S. Broadway"
+        },
+        "name": "The Hi-Dive"
+    },
+    "name": "Typhoon with Radiation City",
+    "offers": {
+        "@type": "Offer",
+        "price": "13.00",
+        "priceCurrency": "USD",
+        "url": "http://www.ticketfly.com/purchase/309433"
+    },
+    "startDate": "Sat Sep 14"
 }
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
+                        </code></pre>
+                    </section>
 
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+                    <section>
+                        <h2>Un choix technique :</h2>
+                        <ul>
+                            <li>Standard</li>
+                            <li>Ouvert</li>
+                            <li>Cohérent</li>
+                            <li>En cours d'adoption massive</li>
+                            <li>Adapté aux outils disponibles</li>
+                        </ul>
+                    </section>
+                </section>
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
+                <section>
+                    <section><h1>Outillage Symfony</h1></section>
 
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							<tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							<tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							<tr>
-						</tbody>
-					</table>
-				</section>
+                    <section data-background="img/symfony-tools.png"></section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+                    <section>
+                        <h2>bundles de très bonne facture, <b>mais</b> :</h2>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
+                        <ul>
+                            <li class="fragment">Beaucoup de boilerplate code à écrire</li>
+                            <li class="fragment">Pas de support de JSON-LD ni de Hydra</li>
+                            <li class="fragment">Courbe d'apprentissage lente : beaucoup d'outils à maîtriser et intégrer</li>
+                            <li class="fragment">JMSSerializer = licence Apache 2 = <s>GPL v2 (Drupal, phpBB, Thelia...)</s></li>
+                        </ul>
+                    </section>
+                </section>
 
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
+                <section>
+                    <section>
+                        <h1>Dunglas's API Platform</h1>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+                        <p>Une solution facile à prendre en main, évolutive et intégrée pour réaliser des API REST.<br><br></p>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
+                        <p>
+                            <a href="https://github.com/dunglas/api-platform"><i class="fa fa-github"></i> <b>github.com/dunglas/api-platform</b></a><br>
+                            <a href="http://bookstore-api.dunglas.fr"><i class="fa fa-globe"></i> <b>bookstore-api.dunglas.fr</b></a> (si t'as <code>curl</code> sur ton iPhone)
+                        </p>
+                    </section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+                    <section>
+                        <h2>Une édition de Symfony avec</h2>
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
+                        <ul>
+                            <li class="fragment">Un générateur de modèle utilisant Schema.org</li>
+                            <li class="fragment">Une API JSON-LD / Hydra qui "juste marche" en quelques clics</li>
+                            <li class="fragment">Une belle documentation autogénérée (NelmioApiDoc inside)</li>
+                            <li class="fragment">Une plate-forme de test pour l'API (Behat + Behatch inside)</li>
+                            <li class="fragment">La gestion des CORS (NelmioCors) et du cache (FOSHttpCache)</li>
+                            <li class="fragment">Doctrine ORM, Monolog, Swiftmailer... : Symfony quoi</li>
+                        </ul>
+                    </section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
+                </section>
 
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
+                <section>
+                    <h2>Getting started</h2>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
+                    <code>composer create-project dunglas/api-platform --stability=dev my-api</code>
+                </section>
 
+                <section>
+                    <section>
+                        <h2>Générer les classes d'entité avec</h2>
+                        <h1>PHP Schema</h1>
+                    </section>
+
+                    <section>
+                        <h2>Étape 1</h2>
+
+                        Choisir les types dont on a besoin et leurs propriétés sur<br>
+                        <a href="http://schema.org"><b><i class="fa fa-globe"></i> Schema.org</b></a>.
+                        <br>Il y en a pour a peu près tout.
+                    </section>
+
+                    <section>
+                        <h2>Étape 2</h2>
+
+                        Créer un fichier de config.
+
+                        <code><pre>
+namespaces:
+  entity: AppBundle\Entity
+types:
+  Thing:
+    properties:
+      name: ~
+      url: ~
+  Person:
+    properties:
+      birthDate: ~
+      gender: ~
+                        </pre></code>
+                    </section>
+
+                    <section>
+                        <h2>Étape 3</h2>
+
+                        Générer
+
+                        <p><code>bin/schema generate-types src/ app/config/schema.yml</code></p>
+                    </section>
+
+                    <section>
+                        <h2>Grâce aux types Schema.org, j'obtiens :</h2>
+
+                        <ul>
+                            <li class="fragment">Des classes, propriétés, getters et setters (PSR <i>compliant</i>)</li>
+                            <li class="fragment">Un mapping Doctrine ORM fonctionnel (y compris pour les relations et l'héritage)</li>
+                            <li class="fragment">Les contraintes de validation (composant Validator)</li>
+                            <li class="fragment">Une PHPDoc complète</li>
+                            <li class="fragment">(optionnel) des interfaces</li>
+                            <li class="fragment">(optionnel) le mapping Doctrine <code>ResolveTargetEntity</code></li>
+                            <li class="fragment">(optionnel) le support des vocabulaires pour l'API JSON-LD</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <pre><code>
+&lt;?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * A person (alive, dead, undead, or fictional).
+ *
+ * @see http://schema.org/Person Documentation on Schema.org
+ *
+ * @ORM\Entity
+ */
+class Person extends Thing
+{
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+    /**
+     * @var string An additional name for a Person, can be used for a middle name.
+     * @Assert\Type(type="string")
+     * @ORM\Column(nullable=true)
+     */
+    private $additionalName;
+    /**
+     * @var PostalAddress Physical address of the item.
+     * @ORM\ManyToOne(targetEntity="PostalAddress")
+     */
+    private $address;
+    /**
+     * @var \DateTime Date of birth.
+     * @Assert\Date
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $birthDate;
+    /**
+     * @var string Email address.
+     * @Assert\Email
+     * @ORM\Column(nullable=true)
+     */
+    private $email;
+    /**
+     * @var string Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property.
+     * @Assert\Type(type="string")
+     * @ORM\Column(nullable=true)
+     */
+    private $familyName;
+    /**
+     * @var string Gender of the person.
+     * @Assert\Type(type="string")
+     * @ORM\Column(nullable=true)
+     */
+    private $gender;
+    /**
+     * @var string Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property.
+     * @Assert\Type(type="string")
+     * @ORM\Column(nullable=true)
+     */
+    private $givenName;
+    /**
+     * @var string The job title of the person (for example, Financial Manager).
+     * @Assert\Type(type="string")
+     * @ORM\Column(nullable=true)
+     */
+    private $jobTitle;
+    /**
+     * @var string The telephone number.
+     * @Assert\Type(type="string")
+     * @ORM\Column(nullable=true)
+     */
+    private $telephone;
+
+    /**
+     * Sets id.
+     *
+     * @param  integer $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets id.
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Sets additionalName.
+     *
+     * @param  string $additionalName
+     * @return $this
+     */
+    public function setAdditionalName($additionalName)
+    {
+        $this->additionalName = $additionalName;
+
+        return $this;
+    }
+
+    /**
+     * Gets additionalName.
+     *
+     * @return string
+     */
+    public function getAdditionalName()
+    {
+        return $this->additionalName;
+    }
+
+    /**
+     * Sets address.
+     *
+     * @param  PostalAddress $address
+     * @return $this
+     */
+    public function setAddress(PostalAddress $address)
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets address.
+     *
+     * @return PostalAddress
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * Sets birthDate.
+     *
+     * @param  \DateTime $birthDate
+     * @return $this
+     */
+    public function setBirthDate(\DateTime $birthDate)
+    {
+        $this->birthDate = $birthDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets birthDate.
+     *
+     * @return \DateTime
+     */
+    public function getBirthDate()
+    {
+        return $this->birthDate;
+    }
+
+    /**
+     * Sets email.
+     *
+     * @param  string $email
+     * @return $this
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets email.
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Sets familyName.
+     *
+     * @param  string $familyName
+     * @return $this
+     */
+    public function setFamilyName($familyName)
+    {
+        $this->familyName = $familyName;
+
+        return $this;
+    }
+
+    /**
+     * Gets familyName.
+     *
+     * @return string
+     */
+    public function getFamilyName()
+    {
+        return $this->familyName;
+    }
+
+    /**
+     * Sets gender.
+     *
+     * @param  string $gender
+     * @return $this
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+
+        return $this;
+    }
+
+    /**
+     * Gets gender.
+     *
+     * @return string
+     */
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+    /**
+     * Sets givenName.
+     *
+     * @param  string $givenName
+     * @return $this
+     */
+    public function setGivenName($givenName)
+    {
+        $this->givenName = $givenName;
+
+        return $this;
+    }
+
+    /**
+     * Gets givenName.
+     *
+     * @return string
+     */
+    public function getGivenName()
+    {
+        return $this->givenName;
+    }
+
+    /**
+     * Sets jobTitle.
+     *
+     * @param  string $jobTitle
+     * @return $this
+     */
+    public function setJobTitle($jobTitle)
+    {
+        $this->jobTitle = $jobTitle;
+
+        return $this;
+    }
+
+    /**
+     * Gets jobTitle.
+     *
+     * @return string
+     */
+    public function getJobTitle()
+    {
+        return $this->jobTitle;
+    }
+
+    /**
+     * Sets telephone.
+     *
+     * @param  string $telephone
+     * @return $this
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    /**
+     * Gets telephone.
+     *
+     * @return string
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+}
+                        </code></pre>
+                    </section>
+
+                    <section data-background="img/wow.jpg"></section>
+
+                    <section>
+                        <h2><b>PHP Schema</b> est un outil de <i>scaffolding</i></h2>
+
+                        Ajoutez vos propres classes, propriétés, index, contraintes de validation etc...
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Créer votre API avec</h2>
+                        <h1>JsonLdApiBundle</h1>
+                    </section>
+
+                    <section>
+                        <h2>On définit la resource à exposer</h2>
+
+                        <pre><code>
+# app/config/services.yml
+
+services:
+    person_resource:
+        parent:    "dunglas_json_ld_api.resource"
+        arguments: [ "AppBundle\Entity\Person" ]
+        tags:      [ { name: "json-ld.resource" } ]
+                        </code></pre>
+                    </section>
+
+                    <section><h2>Et pour les cas simples...</h2></section>
+
+                    <section data-background="img/all.jpg"></section>
+
+                    <section><h2>OK... Mais ça fait quoi en vrai ?</h2></section>
+
+                    <section>
+                        <h3>Ça utilise ces métadonnées pour exposer et documenter une API REST JSON-LD / Hydra :</h3>
+
+                        <ul>
+                            <li>Doctrine ORM</li>
+                            <li>Composant Validator</li>
+                            <li>Composer Serializer (sf 2.7)</li>
+                            <li>PHPDoc</li>
+                            <li><b>Les vôtres</b> (oui, on peut enregistrer des loaders perso)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>On a donc, en quelques clics :</h2>
+
+                        <ul>
+                            <li class="fragment">CRUD complet (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>)</li>
+                            <li class="fragment">Validation des données et retour</li>
+                            <li class="fragment">Pagination des collections</li>
+                            <li class="fragment">serialization des erreurs (thx @sroze)</li>
+                            <li class="fragment">Enregistrement automatique des routes</li>
+                            <li class="fragment">Filtres sur les propriétés</li>
+                            <li class="fragment">Tris (très bientôt - thx @theofidry)</li>
+                            <li class="fragment">Un point d'entrée hypermédia</li>
+                            <li class="fragment">La gestion transparente des dates</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h3>Support complet JSON-LD / Hydra / Schema.org</h3>
+
+                        <img alt="Hydra Console" src="img/hydra-console.png">
+
+                        Ça marche même dans Hydra Console !
+                    </section>
+
+                    <section>
+                        <h2>Documentation utilisateur</h2>
+
+                        <img alt="NelmioApiDoc" src="img/nelmio.png">
+
+                        Expérimental : NelmioApiDoc (<code>dev-master</code>) détecte automatiquement les resources exposées
+                        par le bundle.
+                    </section>
+
+                    <section>
+                        <h2>Et c'est complétement extensible</h2>
+
+                        <ul>
+                            <li class="fragment">Système d'évènement puissant (ex : mail après un <code>POST</code>)</li>
+                            <li class="fragment">Support des groupes de validation</li>
+                            <li class="fragment">Support des groupes de serialization (Symfony 2.7)</li>
+                            <li class="fragment">Support des structures imbriquées (ex : produits et offres avec 1 seule requête)</li>
+                            <li class="fragment">Enregistrement d'opérations personnalisées</li>
+                            <li class="fragment">Formats d'entrées / sorties personnalisés (via le composant Serializer)</li>
+                            <li class="fragment">Filtres et tris personnalisés</li>
+                            <li class="fragment">Classes <code>Resource</code> et contrôleurs personnalisés</li>
+                        </ul>
+                    </section>
+
+                    <section data-background="img/clock.jpg">
+                        <h1 style="background-color: rgba(0, 0, 0, 0.6)">Mais on n'a que 40 minutes...</h1>
+                    </section>
+                </section>
+
+                <section>
+                    <section><h1>Les clients web</h1></section>
+
+                    <section>
+                        <h2>Quand le SEO n'a pas d'importance :</h2>
+
+                        <ul>
+                            <li>Web app</li>
+                            <li>Back-office</li>
+                            <li>Intranet</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Faites-vous plaisir !</h2>
+
+                        <ul>
+                            <li>Testé et approuvé avec des SPA AngularJS (mais toutes les technos JS sont OK)</li>
+                            <li>Doc d'intégration avec Restangular disponible</li>
+                            <li>Le CORS sont supportés par défaut</li>
+                            <li>API : un dépôt GIT, une URL propre</li>
+                            <li>Web app : un dépôt GIT, une URL propre</li>
+                        </ul>
+                    </section>
+
+                    <section><h1>Quand le SEO est important</h1></section>
+
+                    <section>
+                        <h3>Le saviez-vous ?</h3>
+
+                        <h2>Depuis quelques mois, Google indexe les sites en <i>full-JavaScript</i></h2>
+                    </section>
+
+                    <section>
+                        <h3>D'ici peu les SPA seront la règle, en attendant :</h3>
+
+                        <ul>
+                            <li>App cliente séparée qui requête l'API : Symfony (sans Doctrine) + Guzzle + Twig</li>
+                            <li>Données structurées de l'API dans le HTML (supporté par Google)</li>
+                        </ul>
+
+                        <pre><code>
+&lt;script type="application/ld+json"&gt;
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "url" : "http://www.your-company-site.com",
+  "contactPoint" : [
+    { "@type" : "ContactPoint",
+      "telephone" : "+1-401-555-1212",
+      "contactType" : "customer service"
+    } ] }
+&lt;/script&gt;
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>La v0.1.0, c'est quand ?</h2>
+
+                        En même temps que Symfony 2.7 :
+                        <h1>dans 1 mois</h1>
+                    </section>
+
+                    <section>
+                        <h2>Mais certains l'utilisent déjà :</h2>
+
+                        <img alt="Smile" width="250" src="img/smile.jpg" style="position: relative; bottom: 30px">
+                        <img alt="Les-Tilleuls.coop" width="250" src="img/les-tilleuls.png">
+                        <img alt="ExaqtWorld" width="300" src="img/exaqtworld.png" style="position: relative; bottom: 65px">
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Bientôt</h2>
+
+                    <ul>
+                        <li>Site dédié</li>
+                        <li>Plus de doc</li>
+                        <li>Support commercial</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <img alt="Thank you" height="600" src="img/questions.png">
+                </section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
