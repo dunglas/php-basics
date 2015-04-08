@@ -85,10 +85,6 @@
                     </section>
 
                     <section>
-                        <img src="img/api-centric.png" height="600" style="background-color: white">
-                    </section>
-
-                    <section>
                         <h1>API-centric</h1>
                         <p>Ils exposeront et consommeront vos données :</p>
                         <ul>
@@ -98,6 +94,10 @@
                             <li class="fragment"><strong>clients, fournisseurs, partenaires</strong></li>
                             <li class="fragment">moteurs de recherche, aggrégateurs, annuaires, comparateurs de prix, places de marché...</li>
                         </ul>
+                    </section>
+
+                    <section>
+                        <img src="img/api-centric.png" height="600" style="background-color: white">
                     </section>
                 </section>
 
@@ -125,20 +125,20 @@
 
                         <ul>
                             <li class="fragment">Style d'architecture orienté ressources</li>
-                            <li class="fragment">Utilisation du protocole et des verbes HTTP</li>
+                            <li class="fragment">Repose sur HTTP</li>
+                            <li class="fragment"><i>stateless</i></li>
                             <li class="fragment">Contrairement à RPC ou à SOAP, n'est ni un format, ni un protocole</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h1>HATEOAS</h1>
+                        <h1>HATEOAS / Linked Data</h1>
 
                         <p><i>Hypermedia as the Engine of Application State</i></p>
 
                         <ul>
                             <li class="fragment">Hypermédia : IRI comme identifiants des ressources</li>
-                            <li class="fragment">Utilisation des types MIME</li>
-                            <li class="fragment">Mouvement Linked Data (W3C)</li>
+                            <li class="fragment">Possibilité de référencer des données externes (similaire aux liens hypertextes)</li>
                             <li class="fragment"><b>Clients génériques</b></li>
                         </ul>
                     </section>
@@ -148,7 +148,6 @@
 
                         <ul>
                             <li class="fragment">Sens commun aux données de différentes sources</li>
-                            <li class="fragment">Indispensables à la contextualisation par les machines</li>
                             <li class="fragment">Composés de classes, propriétés et relations</li>
                             <li class="fragment"><b>Schema.org</b>, GoodRelations, FOAF, Dublin Core...</li>
                         </ul>
@@ -231,7 +230,7 @@
                         </code></pre>
                     </section>
 
-                    <section>
+                    <!--<section>
                         <h2>Un choix technique :</h2>
                         <ul>
                             <li>Standard</li>
@@ -240,7 +239,7 @@
                             <li>En cours d'adoption massive</li>
                             <li>Adapté aux outils disponibles</li>
                         </ul>
-                    </section>
+                    </section>-->
                 </section>
 
                 <section>
@@ -277,10 +276,11 @@
 
                         <ul>
                             <li class="fragment">Un générateur de modèle utilisant Schema.org</li>
-                            <li class="fragment">Une API JSON-LD / Hydra qui "juste marche" en quelques clics</li>
+                            <li class="fragment">Une API JSON-LD / Hydra qui <i>just works</i>)</li>
                             <li class="fragment">Une belle documentation autogénérée (NelmioApiDoc inside)</li>
                             <li class="fragment">Une plate-forme de test pour l'API (Behat + Behatch inside)</li>
-                            <li class="fragment">La gestion des CORS (NelmioCors) et du cache (FOSHttpCache)</li>
+                            <li class="fragment">Authentification aisée avec JSON Web Token (LexikJWTAuthentication) ou OAuth (FOSOAuthServer)</li>
+                            <li class="fragment">En-têtes CORS (NelmioCors) et cache (FOSHttpCache)</li>
                             <li class="fragment">Doctrine ORM, Monolog, Swiftmailer... : Symfony quoi</li>
                         </ul>
                     </section>
@@ -297,22 +297,18 @@
                     <section>
                         <h2>Générer les classes d'entité avec</h2>
                         <h1>PHP Schema</h1>
+
+                        <a href="http://php-schema.dunglas.com"><i class="fa fa-globe"></i> php-schema.dunglas.com</a><br>
+                        <a href="https://github.com/dunglas/php-schema"><i class="fa fa-github"></i> github.com/dunglas/php-schema</a>
                     </section>
 
                     <section>
                         <h2>Étape 1</h2>
 
-                        Choisir les types dont on a besoin et leurs propriétés sur<br>
-                        <a href="http://schema.org"><b><i class="fa fa-globe"></i> Schema.org</b></a>.
-                        <br>Il y en a pour a peu près tout.
-                    </section>
+                        Indiquer les types et propriétés
+                        <a href="http://schema.org"><b><i class="fa fa-globe"></i> Schema.org</b></a> que l'on souhaite dans un fichier de config :
 
-                    <section>
-                        <h2>Étape 2</h2>
-
-                        Créer un fichier de config.
-
-                        <code><pre>
+                        <pre><code>
 namespaces:
   entity: AppBundle\Entity
 types:
@@ -324,11 +320,11 @@ types:
     properties:
       birthDate: ~
       gender: ~
-                        </pre></code>
+                        </code></pre>
                     </section>
 
                     <section>
-                        <h2>Étape 3</h2>
+                        <h2>Étape 2</h2>
 
                         Générer
 
@@ -350,6 +346,8 @@ types:
                     </section>
 
                     <section>
+                        <h2>Exemple de code généré</h2>
+
                         <pre><code>
 &lt;?php
 
@@ -674,10 +672,12 @@ class Person extends Thing
                     <section>
                         <h2>Créer votre API avec</h2>
                         <h1>JsonLdApiBundle</h1>
+
+                        <a href="https://github.com/dunglas/DunglasJsonLdApiBundle"><i class="fa fa-github"></i> github.com/dunglas/DunglasJsonLdApiBundle</a>
                     </section>
 
                     <section>
-                        <h2>On définit la resource à exposer</h2>
+                        <h2>On définit la ressource à exposer</h2>
 
                         <pre><code>
 # app/config/services.yml
@@ -709,7 +709,7 @@ services:
                     </section>
 
                     <section>
-                        <h2>On a donc, en quelques clics :</h2>
+                        <h2>On a donc, en quelques lignes :</h2>
 
                         <ul>
                             <li class="fragment">CRUD complet (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>)</li>
@@ -733,7 +733,7 @@ services:
                     </section>
 
                     <section>
-                        <h2>Documentation utilisateur</h2>
+                        <h2>Documentation utilisateur et sandbox</h2>
 
                         <img alt="NelmioApiDoc" src="img/nelmio.png">
 
