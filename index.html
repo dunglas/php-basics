@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-        <title>Construire des applications API-centric avec Symfony</title>
+        <title>PHP / Symfony : séance 1</title>
 
-        <meta name="description" content="La nouvelle manière de construire les applications web.">
+        <meta name="description" content="PHP / Symfony : séance 1">
         <meta name="author" content="Kévin Dunglas">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -40,820 +40,820 @@
 		<div class="reveal">
 
 			<div class="slides">
-                <section data-background="img/cloud.jpg">
-                    <h2>À la découverte de</h2>
-                    <h1 style="font-size: 210px">API Platform</h1>
-                </section>
-
                 <section>
-                    <div style="float: left; width: 60%">
-                        <h2>Kévin Dunglas</h2>
+                    <h1>PHP / Symfony</h1>
 
-                        <ul>
-                            <li>Fondateur <a href="http://les-tilleuls.coop">Les-Tilleuls.coop</a></li>
-                            <li><a href="http://symfony.com">Symfony</a> core-team</li>
-                            <li>
-                                <a href="http://twitter.com/dunglas"><i class="fa fa-twitter"></i></a> <a href="http://github.com/dunglas"><i class="fa fa-github"></i></a> @dunglas
-                            </li>
-                        </ul>
-                    </div>
-                    <div style="float: left; width: 40%">
-                        <img alt="Les-Tilleuls.coop" src="img/les-tilleuls.png">
-                    </div>
+                    <h2>Séance 1</h2>
                 </section>
 
                 <section>
                     <section>
-                        <h2>1985</h2>
-
-                        <img alt="3615 ulla" src="img/3615ulla.jpg" height="550">
+                        <div style="float: left; width: 60%">
+                            <h2>Kévin Dunglas</h2>
+    
+                            <ul>
+                                <li>Fondateur de <a href="http://les-tilleuls.coop">Les-Tilleuls.coop</a></li>
+                                <li>Membre de la <a href="http://symfony.com">Symfony</a> core-team</li>
+                                <li>Créateur de <a href="https://api-platform.com">API Platform</a></li>
+                                <li>Contributeur au langage PHP</li>
+                            </ul>
+                        </div>
+                        <div style="float: left; width: 40%">
+                            <img alt="Les-Tilleuls.coop" src="img/les-tilleuls.png">
+                        </div>
                     </section>
 
                     <section>
-                        <h2>2000</h2>
+                        <a href="mailto:kevin@les-tilleuls.coop">kevin@les-tilleuls.coop</a><br><br>
 
-                        <img alt="Le web" src="img/web.png" height="550" style="background-color: white">
+                        <a href="http://twitter.com/dunglas"><i class="fa fa-twitter"></i></a> <a href="http://github.com/dunglas"><i class="fa fa-github"></i></a> @dunglas
                     </section>
 
                     <section>
-                        Twig, Assetic, Composant Form, CSRF...
-                        <h3>L'édition standard de Symfony est toujours orientée pour développer ce type d'applications.</h3>
-                    </section>
-
-                    <section>
-                        <h1>2015 ?</h1>
-                    </section>
-
-                    <section>
-                        <h1>API-centric</h1>
-                        <p>Ils exposeront et consommeront vos données :</p>
-                        <ul>
-                            <li class="fragment">SPA et sites <i>Responsive</i></li>
-                            <li class="fragment">applis mobiles natives</li>
-                            <li class="fragment">applis lourdes Linux / Windows / Mac</li>
-                            <li class="fragment"><strong>clients, fournisseurs, partenaires</strong></li>
-                            <li class="fragment">moteurs de recherche, aggrégateurs, annuaires, comparateurs de prix, places de marché...</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <img src="img/api-centric.png" height="600" style="background-color: white">
-                    </section>
-                </section>
-
-                <section>
-                    <section>
-                        <h1>API : état de l'art</h1>
-                    </section>
-
-                    <section>
-                        <h1>JSON</h1>
-
-                        <p><i>JavaScript Object Notation</i></p>
+                        <h2>Au programme cette année :</h2>
 
                         <ul>
-                            <li class="fragment">Léger : efficace pour le mobile</li>
-                            <li class="fragment">Standard (RFC 7159, ECMA-404)</li>
-                            <li class="fragment">Fonctionne partout</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h1>REST</h1>
-
-                        <p><i>REpresentational State Transfer</i></p>
-
-                        <ul>
-                            <li class="fragment">Style d'architecture orienté ressources</li>
-                            <li class="fragment">Repose sur HTTP</li>
-                            <li class="fragment"><i>stateless</i></li>
-                            <li class="fragment">Contrairement à RPC ou à SOAP, n'est ni un format, ni un protocole</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h1>HATEOAS / Linked Data</h1>
-
-                        <p><i>Hypermedia as the Engine of Application State</i></p>
-
-                        <ul>
-                            <li class="fragment">Hypermédia : IRI comme identifiants des ressources</li>
-                            <li class="fragment">Possibilité de référencer des données externes (similaire aux liens hypertextes)</li>
-                            <li class="fragment"><b>Clients génériques</b></li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h1>Vocabulaires</h1>
-
-                        <ul>
-                            <li class="fragment">Sens commun aux données de différentes sources</li>
-                            <li class="fragment">Composés de classes, propriétés et relations</li>
-                            <li class="fragment"><b>Schema.org</b>, GoodRelations, FOAF, Dublin Core...</li>
+                            <li>PHP</li>
+                            <li>Symfony</li>
+                            <li>Doctrine</li>
                         </ul>
                     </section>
                 </section>
 
                 <section>
-                    <section><h1>Formats</h1></section>
-
-                    <section data-background="img/formats.png"></section>
-
-                    <section data-background="img/man_housework.jpg">
-                        <h1 style="color: black; background-color: rgba(255, 255, 255, 0.6)">Un peu de ménage</h1>
-                    </section>
+                    <section><h1>PHP</h1></section>
 
                     <section>
-                        <h1>JSON-LD</h1>
-
-                        <p><i>JSON for Linked Data</i></p>
-
                         <ul>
-                            <li class="fragment">Standard : recommandation du W3C (depuis 2014)</li>
-                            <li class="fragment">Facile à prendre en main : ressemble à la manière "classique"</li>
-                            <li class="fragment">Adopté par Gmail, GitHub, la BBC, Microsoft, US gov...</li>
-                            <li class="fragment">Compatible avec les technologies du web sémantique (RDF, SPARQL, triple store...)</li>
+                            <li><i>PHP Hypertext Preprocessor</i> acronyme récursif</li>
+                            <li> (initialement <i>Personal Home Page</i></li>
+                            <li>Publié en 1995 par Rasmus Lerdorf</li>
+                            <li>Logiciel libre et gratuit</li>
+                            <li>1er langage pour le développement web côté serveur</li>
+                            <li>6ème langage le plus utilisé au monde (Tiobe novembre 2015)</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h1>Schema.org</h1>
+                        <h2>Un langage omniprésent</h2>
 
                         <ul>
-                            <li class="fragment">Définit un grand nombre d'éléments courants : personnes, publications, évènement, produits, avis, élèments chimiques et médicaux...</li>
-                            <li class="fragment">Créé et pris en charge par Google, Bing, Yahoo! et Yandex</li>
-                            <li class="fragment">Adoption massive, maintenant sous l'égide du W3C (Web schemas group)</li>
-                            <li class="fragment">Représentable sous forme de HTML (microdata), RDF (RDFa) et <b>JSON-LD</b></li>
-                            <li class="fragment"><b>Extensible</b></li>
+                            <li>Wordpress, Drupal, Prestashop, Magento, phpBB, MediaWiki, SugarCRM, Symfony, Laravel sont écrits en PHP</li>
+                            <li>Facebook, Wikipédia, Yahoo! et plus de 80% de l'ensemble des sites web sont écrits en PHP</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h1>Hydra</h1>
+                        <ul>
+                            <li>Langage de script (interprété)</li>
+                            <li>Syntaxe similaire au C et au Java</li>
+                            <li>Typage dynamique et faible</li>
+                            <li>Langage supportant la programmation impérative, orienté objet et avec des influences fonctionelles</li>
+                            <li>Historiquement, peut être mélangé a du code HTML</li>
+                            <li>Interpretation via un serveur web (module PHP de Apache, PHP FPM)</li>
+                            <li>Fonctionne également en ligne de commande (CLI)</li>
+                        </ul>
+                    </section>
+                </section>
+
+                    <section>
+                        <h2>RTFM</h2>
+
+                        <a href="http://php.net/manual/">php.net/manual/</a>
+                    </section>
+
+                    <section>
+                        <h2>Installation</h2>
 
                         <ul>
-                            <li class="fragment">Permet de décrire des API REST en JSON-LD</li>
-                            <li class="fragment">= support de l'écriture</li>
-                            <li class="fragment">= API auto-découvrable</li>
-                            <li class="fragment">= collections avec pagination</li>
-                            <li class="fragment">Draft W3C (Work In Progress)</li>
+                            <li>Debian : <code>apt-get install php</code></li>
+                            <li>Mac : <code>brew install php</code></li>
+                            <li>Windows : 🤷🏽‍ (use Docker)</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h2>Ce que ça donne</h2>
+                        <section>
+                        <h2>Hello World!</h2>
 
-                        <pre><code>
+                        <pre><code>&lt;?php
+
+echo 'Hello World';</code></pre>
+
+                        </section>
+
+                        <section>
+                            <h2>Encore plus simple</h2>
+
+                            <pre><code>Hello World</code></pre>
+                        </section>
+                    </section>
+
+                    <section>
+                        <h2>Quelques conventions</h2>
+
+                        <ul>
+                            <li>Les fichiers contenant le code source doivent se terminer par l'extension <code>.php</code></li>
+                            <li>Les serveurs web (avec support PHP) exécutent les fichiers <code>.php</code> et renvoient leur sortie au navigateur</li>
+                            <li>La Coding Standards sont définis par les PSR-1 et 2 (Proposed Standards Recommendation) : <a href="http://php-fig.org">php-fig.org</a></li>
+                        </ul>
+                    </section>
+
+                <section>
+                    <section>
+                        <h1>Exécuter un programme</h1>
+                    </section>
+
+                    <section>
+                        Depuis l'invite de commande :
+
+                        <pre><code>php my-script.php</code></pre>
+                    </section>
+
+                    <section>
+                        Depuis l'interpreteur interactif (Read-Eval-Print-Loop - REPL) :
+
+                        <pre><code>php -a</code></pre>
+                    </section>
+
+                    <section>
+                        Avec le serveur web intégré (pendant le développement seulement) :
+
+<pre><code>php -S localhost:8000</code></pre>
+
+                        Puis lancer <code>http://localhost:8000</code> dans un navigateur.
+                    </section>
+
+                    <section>
+                        En utilisant un serveur web (Apache, Nginx, IIS...) :
+
+                        Placer les fichiers PHP dans le répertoire du serveur web.
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Syntaxe</h2>
+
+                        Afin d'être exécuter, le code PHP doit être placé après un tag <code>&lt;?php</code>.
+
+                        <pre><code>&lt;?php
+
+for ($i = 0; $i < 10; $i++) {
+    echo $i.PHP_EOL;
+}</code></pre>
+                    </section>
+
+                    <section>
+                        Tout texte non compris entre des tags <code>&lt;?php</code> et <code>?&gt;</code> est envoyé vers la sortie standard:
+
+                        <pre><code>&lt;?php $me = 'Kévin'; ?&gt;
+Bonjour, &lt;?php echo $me;
+                        </code></pre>
+
+                        Le tag fermant est optionel. L'omettre quand le fichier ne contient que du PHP.
+                    </section>
+
+                    <section>
+                        <h2>Proche du C, du Perl et du Java...</h2>
+
+                        <ul>
+                            <li>Les instructions sont séparées par un <code>;</code></li>
+                            <li>Les blocs sont délimités par <code>{</code> et <code>}</code></li>
+                            <li>Les variables commencent par un <code>$</code> (comme en Perl mais contrairement au C)</li>
+                            <li>Les commentaires sont délimités par <code>/*</code> et <code>*/</code></li>
+                            <li>Tout ce qui suit les symboles <code>//</code> et <code>#</code> est également un commentaire</li>
+                            <li>L'indentation n'a pas de valeur sémantique (contrairement à Ruby ou Python)</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <pre><code>&lt;?php
+
+function getWelcomeMessage($name = 'Kévin')
 {
-    "@context": "http://schema.org",
-    "@type": "Event",
-    "location": {
-        "@type": "Place",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Denver",
-            "addressRegion": "CO",
-            "postalCode": "80209",
-            "streetAddress": "7 S. Broadway"
-        },
-        "name": "The Hi-Dive"
-    },
-    "name": "Typhoon with Radiation City",
-    "offers": {
-        "@type": "Offer",
-        "price": "13.00",
-        "priceCurrency": "USD",
-        "url": "http://www.ticketfly.com/purchase/309433"
-    },
-    "startDate": "Sat Sep 14"
+    return 'Hello'.$name."\n";
 }
-                        </code></pre>
-                    </section>
 
-                    <!--<section>
-                        <h2>Un choix technique :</h2>
-                        <ul>
-                            <li>Standard</li>
-                            <li>Ouvert</li>
-                            <li>Cohérent</li>
-                            <li>En cours d'adoption massive</li>
-                            <li>Adapté aux outils disponibles</li>
-                        </ul>
-                    </section>-->
-                </section>
-
-                <section>
-                    <section><h1>Outillage Symfony</h1></section>
-
-                    <section data-background="img/symfony-tools.png"></section>
-
-                    <section>
-                        <h2>bundles de très bonne facture, <b>mais</b> :</h2>
-
-                        <ul>
-                            <li class="fragment">Beaucoup de boilerplate code à écrire</li>
-                            <li class="fragment">Pas de support de JSON-LD ni de Hydra</li>
-                            <li class="fragment">Courbe d'apprentissage lente : beaucoup d'outils à maîtriser et intégrer</li>
-                            <li class="fragment">JMSSerializer = licence Apache 2 = <s>GPL v2 (Drupal, phpBB, Thelia...)</s></li>
-                        </ul>
+echo getWelcomeMessage('Lille 1');</code></pre>
                     </section>
                 </section>
 
                 <section>
-                    <section>
-                        <h1>Dunglas's API Platform</h1>
-
-                        <p>Une solution facile à prendre en main, évolutive et intégrée pour réaliser des API REST.<br><br></p>
-
-                        <p>
-                            <a href="https://github.com/dunglas/api-platform"><i class="fa fa-github"></i> <b>github.com/dunglas/api-platform</b></a><br>
-                            <a href="http://bookstore-api.dunglas.fr"><i class="fa fa-globe"></i> <b>bookstore-api.dunglas.fr</b></a> (si t'as <code>curl</code> sur ton iPhone)
-                        </p>
-                    </section>
 
                     <section>
-                        <h2>Une édition de Symfony avec</h2>
-
-                        <ul>
-                            <li class="fragment">Un générateur de modèle utilisant Schema.org</li>
-                            <li class="fragment">Une API JSON-LD / Hydra qui <i>just works</i>)</li>
-                            <li class="fragment">Une belle documentation autogénérée (NelmioApiDoc inside)</li>
-                            <li class="fragment">Une plate-forme de test pour l'API (Behat + Behatch inside)</li>
-                            <li class="fragment">Authentification aisée avec JSON Web Token (LexikJWTAuthentication) ou OAuth (FOSOAuthServer)</li>
-                            <li class="fragment">En-têtes CORS (NelmioCors) et cache (FOSHttpCache)</li>
-                            <li class="fragment">Doctrine ORM, Monolog, Swiftmailer... : Symfony quoi</li>
-                        </ul>
+                        <h1>Types</h1>
                     </section>
+                <section>
+                    <h2>Types simples</h2>
 
+                        <pre><code>&lt;?php
+
+$a = false; $b = true; // boolean
+$c = 2; // int
+$d = 3.14; // float
+$e = 'J\'aime le PHP\n'; // string, guillemets simples - préféré (caractères spéciaux non interprétés)
+$f = "J'aime le PHP\n"; // string, guillemets doubles (caractères spéciaux et élèments de langage interprétés)
+$g = &lt;&lt;&lt;MYLONGSTR
+Ma longue chaîne... {$c}
+MYLONGSTR; // Syntaxe Heredoc
+
+$g = &lt;&lt;&lt;'MYCODE'
+Ma longue chaîne... {$c}
+MYCODE; // Syntaxe Nowdoc
+</code></pre>
                 </section>
 
                 <section>
-                    <h2>Getting started</h2>
+                    <h2>Types composés et spéciaux</h2>
+                        <pre><code>&lt;?php
 
-                    <code>composer create-project dunglas/api-platform --stability=dev my-api</code>
+// composés
+$arr = array('a', 22, false); $b = [1, null, array('a'),]; // array
+$obj = new \stdClass(); // object
+
+// spéciaux
+$a = null; // null
+$b = fopen('/tmp/myfile'); // resource (fichiers, streams)
+$f = function ($foo) { return strrev($foo); }; // callable (closures and other... callables)
+</code></pre>
+                </section>
+
+                    <section>
+                        <h2>Pseudos types et alias</h2>
+
+                        <p>Pseudos types (utilisés uniquement dans la doc) :</p>
+
+                        <ul>
+                            <li>mixed : types variables</li>
+                            <li>number : (int ou float)</li>
+                        </ul>
+
+                        <p>Beaucoup d'alias : bool et boolean, float et double, callable et callaback...</p>
+                    </section>
+
+                    <section>
+                        <h2>Manipulation des types</h2>
+
+                        <ul>
+                            <li>Impossible de définir le type d'une variable lors de sa déclaration</li>
+                            <li>Il dépend de son contexte d'utilisation</li>
+                        </ul>
+
+                        <pre><code>&lt;?php
+
+$a = 'foo'; // string
+var_dump($a);
+$a = 9; // a est devenu un int
+var_dump($a);
+
+$routeNumber = 66; // int
+$bar = 'Route '.$routeNumber; // string 'Route 66'
+var_dump($bar);
+
+$b = 10 + "5 chats."; // à votre avis ?
+var_dump($b);
+</code></pre>
+
+                        Pratique... mais extrêmement dangereux.
+                    </section>
+
+                    <section>
+                        <h2>Casting</h2>
+
+                        <pre><code>&lt;?php
+
+$a = (string) 10; // casting d'un int en string</code></pre>
+                    </section>
                 </section>
 
                 <section>
                     <section>
-                        <h2>Générer les classes d'entité avec</h2>
-                        <h1>PHP Schema</h1>
-
-                        <a href="http://php-schema.dunglas.com"><i class="fa fa-globe"></i> php-schema.dunglas.com</a><br>
-                        <a href="https://github.com/dunglas/php-schema"><i class="fa fa-github"></i> github.com/dunglas/php-schema</a>
-                    </section>
-
-                    <section>
-                        <h2>Étape 1</h2>
-
-                        Indiquer les types et propriétés
-                        <a href="http://schema.org"><b><i class="fa fa-globe"></i> Schema.org</b></a> que l'on souhaite dans un fichier de config :
-
-                        <pre><code>
-namespaces:
-  entity: AppBundle\Entity
-types:
-  Thing:
-    properties:
-      name: ~
-      url: ~
-  Person:
-    properties:
-      birthDate: ~
-      gender: ~
-                        </code></pre>
-                    </section>
-
-                    <section>
-                        <h2>Étape 2</h2>
-
-                        Générer
-
-                        <p><code>bin/schema generate-types src/ app/config/schema.yml</code></p>
-                    </section>
-
-                    <section>
-                        <h2>Grâce aux types Schema.org, j'obtiens :</h2>
+                        <h1>Opérateurs</h1>
 
                         <ul>
-                            <li class="fragment">Des classes, propriétés, getters et setters (PSR <i>compliant</i>)</li>
-                            <li class="fragment">Un mapping Doctrine ORM fonctionnel (y compris pour les relations et l'héritage)</li>
-                            <li class="fragment">Les contraintes de validation (composant Validator)</li>
-                            <li class="fragment">Une PHPDoc complète</li>
-                            <li class="fragment">(optionnel) des interfaces</li>
-                            <li class="fragment">(optionnel) le mapping Doctrine <code>ResolveTargetEntity</code></li>
-                            <li class="fragment">(optionnel) le support des vocabulaires pour l'API JSON-LD</li>
+                            <li>Arithmétiques : <code>-</code>, <code>+</code>, <code>--</code>, <code>++</code>, <code>/</code>, <code>%</code> (modulo), <code>**</code> (exponentielle)</li>
+                            <li>Concaténation de chaînes : <code>.</code>, <code>.=</code></li>
+                            <li>Comparaison : <code>==</code>, <code>!=</code>, <code>===</code>, <code>!==</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code></li>
+                            <li>Comparaison PHP 7 : <code><=></code> (combiné), <code>??</code> (union nul)</li>
+                            <li>Logiques : <code>||</code>, <code>&&</code>, <code>!</code>, <code>xor</code>, <code>or</code>, <code>and</code></li>
+                            <li>Bits à bits : <code>&</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code></li>
+                            <li>Type : <code>instanceof</code></li>
+                            <li>...</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h2>Exemple de code généré</h2>
+                        <h2>Opérateurs de comparaison</h2>
 
-                        <pre><code>
-&lt;?php
+<pre><code>&lt;?php
 
-namespace AppBundle\Entity;
+var_dump(1 == 1); // vrai
+var_dump(1 == '1'); // vrai - les variables sont toujours converties
+// afin qu'elles aient le même type
+var_dump(false == ''); // vrai
+</code></pre>
+                    </section>
 
-use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
+<section>
+                        <h2>Opérateurs de comparaison</h2>
+<pre><code>&lt;?php
 
-/**
- * A person (alive, dead, undead, or fictional).
- *
- * @see http://schema.org/Person Documentation on Schema.org
- *
- * @ORM\Entity
- */
-class Person extends Thing
-{
-    /**
-     * @var integer
-     * @ORM\Column(type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-    /**
-     * @var string An additional name for a Person, can be used for a middle name.
-     * @Assert\Type(type="string")
-     * @ORM\Column(nullable=true)
-     */
-    private $additionalName;
-    /**
-     * @var PostalAddress Physical address of the item.
-     * @ORM\ManyToOne(targetEntity="PostalAddress")
-     */
-    private $address;
-    /**
-     * @var \DateTime Date of birth.
-     * @Assert\Date
-     * @ORM\Column(type="date", nullable=true)
-     */
-    private $birthDate;
-    /**
-     * @var string Email address.
-     * @Assert\Email
-     * @ORM\Column(nullable=true)
-     */
-    private $email;
-    /**
-     * @var string Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property.
-     * @Assert\Type(type="string")
-     * @ORM\Column(nullable=true)
-     */
-    private $familyName;
-    /**
-     * @var string Gender of the person.
-     * @Assert\Type(type="string")
-     * @ORM\Column(nullable=true)
-     */
-    private $gender;
-    /**
-     * @var string Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property.
-     * @Assert\Type(type="string")
-     * @ORM\Column(nullable=true)
-     */
-    private $givenName;
-    /**
-     * @var string The job title of the person (for example, Financial Manager).
-     * @Assert\Type(type="string")
-     * @ORM\Column(nullable=true)
-     */
-    private $jobTitle;
-    /**
-     * @var string The telephone number.
-     * @Assert\Type(type="string")
-     * @ORM\Column(nullable=true)
-     */
-    private $telephone;
+var_dump(0 == false); // vrai
 
-    /**
-     * Sets id.
-     *
-     * @param  integer $id
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
+var_dump('0' == 0); // vrai
+var_dump(0 == ''); // vrai
+var_dump('' == '0'); // devinette...</code></pre>
+                    </section>
 
-        return $this;
-    }
+                    <section>
+                        <p>L'opérateur <code>==</code> n'est pas transitif !</p>
 
-    /**
-     * Gets id.
-     *
-     * @return integer
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
+<pre><code>&lt;?php
 
-    /**
-     * Sets additionalName.
-     *
-     * @param  string $additionalName
-     * @return $this
-     */
-    public function setAdditionalName($additionalName)
-    {
-        $this->additionalName = $additionalName;
+var_dump('0' === 0); // faux - vérifie le type
+var_dump(0 !== ''); // vrai</code></pre>
 
-        return $this;
-    }
+                        <p>Toujours utiliser les opérateurs vérifiant la valeur <b>et</b> le type.</p>
+                    </section>
 
-    /**
-     * Gets additionalName.
-     *
-     * @return string
-     */
-    public function getAdditionalName()
-    {
-        return $this->additionalName;
-    }
+                    <section>
+                        <h2>Opérateurs logiques</h2>
 
-    /**
-     * Sets address.
-     *
-     * @param  PostalAddress $address
-     * @return $this
-     */
-    public function setAddress(PostalAddress $address)
-    {
-        $this->address = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets address.
-     *
-     * @return PostalAddress
-     */
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    /**
-     * Sets birthDate.
-     *
-     * @param  \DateTime $birthDate
-     * @return $this
-     */
-    public function setBirthDate(\DateTime $birthDate)
-    {
-        $this->birthDate = $birthDate;
-
-        return $this;
-    }
-
-    /**
-     * Gets birthDate.
-     *
-     * @return \DateTime
-     */
-    public function getBirthDate()
-    {
-        return $this->birthDate;
-    }
-
-    /**
-     * Sets email.
-     *
-     * @param  string $email
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets email.
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * Sets familyName.
-     *
-     * @param  string $familyName
-     * @return $this
-     */
-    public function setFamilyName($familyName)
-    {
-        $this->familyName = $familyName;
-
-        return $this;
-    }
-
-    /**
-     * Gets familyName.
-     *
-     * @return string
-     */
-    public function getFamilyName()
-    {
-        return $this->familyName;
-    }
-
-    /**
-     * Sets gender.
-     *
-     * @param  string $gender
-     * @return $this
-     */
-    public function setGender($gender)
-    {
-        $this->gender = $gender;
-
-        return $this;
-    }
-
-    /**
-     * Gets gender.
-     *
-     * @return string
-     */
-    public function getGender()
-    {
-        return $this->gender;
-    }
-
-    /**
-     * Sets givenName.
-     *
-     * @param  string $givenName
-     * @return $this
-     */
-    public function setGivenName($givenName)
-    {
-        $this->givenName = $givenName;
-
-        return $this;
-    }
-
-    /**
-     * Gets givenName.
-     *
-     * @return string
-     */
-    public function getGivenName()
-    {
-        return $this->givenName;
-    }
-
-    /**
-     * Sets jobTitle.
-     *
-     * @param  string $jobTitle
-     * @return $this
-     */
-    public function setJobTitle($jobTitle)
-    {
-        $this->jobTitle = $jobTitle;
-
-        return $this;
-    }
-
-    /**
-     * Gets jobTitle.
-     *
-     * @return string
-     */
-    public function getJobTitle()
-    {
-        return $this->jobTitle;
-    }
-
-    /**
-     * Sets telephone.
-     *
-     * @param  string $telephone
-     * @return $this
-     */
-    public function setTelephone($telephone)
-    {
-        $this->telephone = $telephone;
-
-        return $this;
-    }
-
-    /**
-     * Gets telephone.
-     *
-     * @return string
-     */
-    public function getTelephone()
-    {
-        return $this->telephone;
-    }
+                        Quelle différence entre ces deux snippets ? Qu'elle est votre syntaxe préférée ?
+<pre><code>&lt;?php
+$authenticated = $passwordIsCorrect && $isAdmin;
+if ($authenticated) {
+    // Faire quelque chose de dangereux
 }
-                        </code></pre>
+
+$authenticated = $passwordIsCorrect and $isAdmin;
+if ($authenticated) {
+    // Faire quelque chose de dangereux
+}
+</code></pre>
                     </section>
 
-                    <section data-background="img/wow.jpg"></section>
-
                     <section>
-                        <h2><b>PHP Schema</b> est un outil de <i>scaffolding</i></h2>
+                        <p><code>&&</code> / <code>||</code> et <code>and</code> / <code>or</code> ne sont pas synonymes : ils ont une précèdence différente.</p>
 
-                        Ajoutez vos propres classes, propriétés, index, contraintes de validation etc...
+                        <p><b>Ne jamais utiliser <code>and</code> / <code>or</code>.</b></p>
                     </section>
                 </section>
 
                 <section>
-                    <section>
-                        <h2>Créer votre API avec</h2>
-                        <h1>JsonLdApiBundle</h1>
+                    <h2>Structures de contrôle</h2>
 
-                        <a href="https://github.com/dunglas/DunglasJsonLdApiBundle"><i class="fa fa-github"></i> github.com/dunglas/DunglasJsonLdApiBundle</a>
-                    </section>
-
-                    <section>
-                        <h2>On définit la ressource à exposer</h2>
-
-                        <pre><code>
-# app/config/services.yml
-
-services:
-    person_resource:
-        parent:    "dunglas_json_ld_api.resource"
-        arguments: [ "AppBundle\Entity\Person" ]
-        tags:      [ { name: "json-ld.resource" } ]
-                        </code></pre>
-                    </section>
-
-                    <section><h2>Et pour les cas simples...</h2></section>
-
-                    <section data-background="img/all.jpg"></section>
-
-                    <section><h2>OK... Mais ça fait quoi en vrai ?</h2></section>
-
-                    <section>
-                        <h3>Ça utilise ces métadonnées pour exposer et documenter une API REST JSON-LD / Hydra :</h3>
-
-                        <ul>
-                            <li>Doctrine ORM</li>
-                            <li>Composant Validator</li>
-                            <li>Composer Serializer (sf 2.7)</li>
-                            <li>PHPDoc</li>
-                            <li><b>Les vôtres</b> (oui, on peut enregistrer des loaders perso)</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2>On a donc, en quelques lignes :</h2>
-
-                        <ul>
-                            <li class="fragment">CRUD complet (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>)</li>
-                            <li class="fragment">Validation des données et retour</li>
-                            <li class="fragment">Pagination des collections</li>
-                            <li class="fragment">serialization des erreurs (thx @sroze)</li>
-                            <li class="fragment">Enregistrement automatique des routes</li>
-                            <li class="fragment">Filtres sur les propriétés</li>
-                            <li class="fragment">Tris (très bientôt - thx @theofidry)</li>
-                            <li class="fragment">Un point d'entrée hypermédia</li>
-                            <li class="fragment">La gestion transparente des dates</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h3>Support complet JSON-LD / Hydra / Schema.org</h3>
-
-                        <img alt="Hydra Console" src="img/hydra-console.png">
-
-                        Ça marche même dans Hydra Console !
-                    </section>
-
-                    <section>
-                        <h2>Documentation utilisateur et sandbox</h2>
-
-                        <img alt="NelmioApiDoc" src="img/nelmio.png">
-
-                        Expérimental : NelmioApiDoc (<code>dev-master</code>) détecte automatiquement les resources exposées
-                        par le bundle.
-                    </section>
-
-                    <section>
-                        <h2>Et c'est complétement extensible</h2>
-
-                        <ul>
-                            <li class="fragment">Système d'évènement puissant (ex : mail après un <code>POST</code>)</li>
-                            <li class="fragment">Support des groupes de validation</li>
-                            <li class="fragment">Support des groupes de serialization (Symfony 2.7)</li>
-                            <li class="fragment">Support des structures imbriquées (ex : produits et offres avec 1 seule requête)</li>
-                            <li class="fragment">Enregistrement d'opérations personnalisées</li>
-                            <li class="fragment">Formats d'entrées / sorties personnalisés (via le composant Serializer)</li>
-                            <li class="fragment">Filtres et tris personnalisés</li>
-                            <li class="fragment">Classes <code>Resource</code> et contrôleurs personnalisés</li>
-                        </ul>
-                    </section>
-
-                    <section data-background="img/clock.jpg">
-                        <h1 style="background-color: rgba(0, 0, 0, 0.6)">Mais on n'a que 40 minutes...</h1>
-                    </section>
-                </section>
-
-                <section>
-                    <section>
-                        <h2>La v0.1.0, c'est quand ?</h2>
-
-                        En même temps que Symfony 2.7 :
-                        <h1>dans 1 mois</h1>
-                    </section>
-
-                    <section>
-                        <h2>Mais certains l'utilisent déjà :</h2>
-
-                        <img alt="Smile" width="250" src="img/smile.jpg" style="position: relative; bottom: 30px">
-                        <img alt="Les-Tilleuls.coop" width="250" src="img/les-tilleuls.png">
-                        <img alt="ExaqtWorld" width="300" src="img/exaqtworld.png" style="position: relative; bottom: 65px">
-                    </section>
-                </section>
-
-                <section>
-                    <h2>Bientôt</h2>
+                    <p>Similaires au C :</p>
 
                     <ul>
-                        <li>Site dédié</li>
-                        <li>Plus de doc</li>
-                        <li>Support commercial</li>
+                        <li>Conditions : <code>if</code>, <code>else</code>, <code>elseif</code> et syntaxe alternative : <code>$a ? foo() : bar();</code></li>
+                        <li>Boucles : <code>while</code>, <code>do-while</code>, <code>for</code>, <code>foreach</code>, <code>continue</code>, <code>switch</code> (est une boucle en PHP)</li>
+                        <li>Inclusion et exécution de fichiers PHP : <code>include</code>, <code>include_once</code>, <code>require</code>, <code>require_once</code></li>
+                        <li><code>goto</code> : ne pas l'utiliser</li>
                     </ul>
                 </section>
 
                 <section>
-                    <img alt="Thank you" height="600" src="img/questions.png"><br>
+                    <section><h1>Les tableaux</h1></section>
 
-                    PS : On recrute ! Contactez-nous : jobs@les-tilleuls.coop
+                    <section>
+                        <h2>Tableaux simples</h2>
+
+                        <pre><code>&lt;?php
+
+$t = ['a', 1, array(null)];</code></pre>
+
+                        <ul>
+                            <li>Syntaxe courte et longue</li>
+                            <li>Peuvent contenir des élèments de tous types</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Tableaux associatif</h2>
+
+                        <pre><code>&lt;?php
+
+$t = [
+    'foo' => 'bar',
+    'baz' => new \DateTime(),
+];</code></pre>
+
+                        <ul>
+                            <li>Associent une valeur à une clef unique</li>
+                            <li>Les clefs ne peuvent être que de types primitifs</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Parcours de tableaux</h2>
+
+                        La boucle <code>foreach est très adaptée :</code>
+
+                        <pre><code>&lt;?php
+
+foreach (['a', 2 => 'foo'] as $key => $value) {
+    var_dump($key);
+    var_dump($value);
+}</code></pre>
+                    </section>
                 </section>
 
                 <section>
-                    <section>
-                        <h2><i>Bonus track</i></h2>
-                        <h1>Les clients web</h1>
-                    </section>
+                    <section><h1>Les fonctions</h1></section>
 
                     <section>
-                        <h2>Quand le SEO n'a pas d'importance :</h2>
+                        <h2>Bibliothèque standard</h2>
+
+                        <p>PHP dispose d'un très grand nombre de fonctions (et de classes) internes :</p>
 
                         <ul>
-                            <li>Web app</li>
-                            <li>Back-office</li>
-                            <li>Intranet</li>
+                            <li>Manipulation de châines de caractères</li>
+                            <li>Manipulation de tableaux</li>
+                            <li>Mathématiques</li>
+                            <li>Manipulation de fichiers</li>
+                            <li>Sockets réseaux</li>
+                            <li>Accès aux bases de données (SQL et NOSQL)</li>
+                            <li>Validation des entrées utilisateur</li>
+                            <li>Manipulation d'images</li>
+                            <li>Threads</li>
+                            <li>FTP, mails...</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h2>Faites-vous plaisir !</h2>
+                        <h2>Fonctions personnalisées</h2>
+
+                        <pre><code>&lt;?php
+$g = 10;
+
+function myFunction(int $a, array $b = null): int
+{
+    $tot = 0;
+    foreach ($b as $value) {
+        $tot += $value + $a + $g;
+    }
+
+    $g--;
+
+    return $tot;
+}
+
+echo myFunction(10, [3, 4, 5]);</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Type Hint et types de retours</h2>
 
                         <ul>
-                            <li>Testé et approuvé avec des SPA AngularJS (mais toutes les technos JS sont OK)</li>
-                            <li>Doc d'intégration avec Restangular disponible</li>
-                            <li>Le CORS sont supportés par défaut</li>
-                            <li>API : un dépôt GIT, une URL propre</li>
-                            <li>Web app : un dépôt GIT, une URL propre</li>
+                            <li>types primitifs et <code>void</code></li>
+                            <li><code>array</code>, <code>callable</code>, <code>object</code></li>
+                            <li>nom de classes</li>
+                            <li>nom d'interfaces</li>
                         </ul>
                     </section>
 
-                    <section><h1>Quand le SEO est important</h1></section>
-
                     <section>
-                        <h3>Le saviez-vous ?</h3>
+                        <h2>Passage d'arguments par référence</h2>
 
-                        <h2>Depuis quelques mois, Google indexe les sites en <i>full-JavaScript</i></h2>
+                        <pre><code>&lt;?php
+
+function mult(int &$a): void // Notez le &
+{
+    $a *= 10;
+}
+
+$x = 1;
+mult($x);
+var_dump($x);</code></pre>
                     </section>
 
                     <section>
-                        <h3>D'ici peu les SPA seront la règle, en attendant :</h3>
+                        <h2>Fonctions variadiques</h2>
 
-                        <ul>
-                            <li>App cliente séparée qui requête l'API : Symfony (sans Doctrine) + Guzzle + Twig</li>
-                            <li>Données structurées de l'API dans le HTML (supporté par Google)</li>
-                        </ul>
+                        Nombre d'arguments variables :
 
-                        <pre><code>
-                            &lt;script type="application/ld+json"&gt;
-                            { "@context" : "http://schema.org",
-                            "@type" : "Organization",
-                            "url" : "http://www.your-company-site.com",
-                            "contactPoint" : [
-                            { "@type" : "ContactPoint",
-                            "telephone" : "+1-401-555-1212",
-                            "contactType" : "customer service"
-                            } ] }
-                            &lt;/script&gt;
-                        </code></pre>
+                        <pre><code>&lt;?php
+
+function fct(...$a): void
+{
+    foreach ($a as $v) {
+        echo $v;
+    }
+}
+
+fct('a', 'b', 'c');
+
+// Alternative (argument unpacking)
+fct(...['a', 'b', 'c']);</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Fonctions anonymes et closures</h2>
+
+                        <pre><code>&lt;?php
+
+$a = 'pommes';
+$closure = function (int $foo = 10) use ($a): string // import d'une variable du contexte => closure
+{
+    return sprintf('%d %s', $foo, $a);
+}
+
+var_dump($closure(25));</code></pre>
                     </section>
                 </section>
-			</div>
-		</div>
+
+                <section>
+                    <section><h1>Programmation Orientée Objet</h1></section>
+
+                    <section>
+                        <h2>Classes et objets</h2>
+
+                        <pre><code>&lt;?php
+
+class Foo // pas de visibilité pour les classes en PHP
+{
+}
+
+$a = new Foo(); // Nouvelle instance de la classe Foo (objet)
+$a instanceof Foo; // vrai
+
+$className = 'Foo';
+$b = new $className(); // Nouvelle instance de Foo</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Propriétés et constantes de classes</h2>
+
+                        <pre><code>&lt;?php
+
+class MyCls
+{
+    public const FOO = 'ma constante';
+    private const BAR = [1, 2];
+    protected const BAZ = FOO.' au top';
+
+    /**
+     * Accessible depuis l'extérieure documentée avec PHPDoc.
+     *
+     * @var string $c
+     */
+    public $c = 'foo';
+    public static $stat; // Statique : partagée entre toutes les instances
+    private $a; // Accessible dans le contexte de la classe courante
+    protected $b; // Accessible dans le contexte de la classe courante et des ses descendantes
+}
+
+$c1 = new MyCls;
+$c1->c = 'C1';
+$c2 = new MyCls();
+
+var_dump(MyCls::FOO);
+var_dump(MyCls::$stat);
+var_dump($c1->c);
+var_dump($c2->c);</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Méthodes</h2>
+
+                        <pre><code>&lt;?php
+
+class MyCls
+{
+    public const FOO = 'ma constante';
+
+    private $c = 'foo';
+    private static $s;
+
+    public static function setS(string $s): void
+    {
+        self::$s = $s;
+    }
+
+    public function myMethod(string $a): string // réutilisation de la syntaxe dess fonctions + toujours expliciter la visibilité
+    {
+        $a = $this->c; // accès a une propriété
+        $a .= self::$s; // accès a une propriété statique
+        $a .= self::FOO; // accès à une constante de classe
+
+        $this->c = $a;
+
+        return $a;
+    }
+}
+
+MyCls::setS('Baz'); // Appelle d'une méthode statique
+
+$c = new MyCls();
+echo $c->myMethod('hello');
+
+// Alternative
+echo (new MyCls())->myMethod('test');</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Constructeur</h2>
+
+                        <pre><code>&lt;?php
+
+class MyCls
+{
+    private $a;
+
+    public function __construct(int $a) // Executé automatiquement à l'instanciation d'un object
+    {
+        $this->a = $a;
+    }
+}
+
+$o = new MyCls(10);
+                        </code></pre>
+
+                        <p>Note : d'autres "méthodes magiques" existent parmis lesquels des accesseurs et mutateurs magiques, une méthode <code>__toString()</code> pour convertir un objet en string ou encore un destructeur.</p>
+                    </section>
+
+                    <section>
+                        <h2>Héritage</h2>
+
+                        <pre><code>&lt;?php
+
+class MyChildClass extends MyCls // héritage multiple non supporté
+{
+    public function myMethod(int $a): int
+    {
+        echo 'Enfant appelé';
+        return parent::myMethod($a); // Appel de la méthode parente
+    }
+}                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Classes abstraites</h2>
+
+                        <pre><code>&lt;?php
+
+abstract class P
+{
+    public abstract function a(): void; // Doit être implémenté dans une classe fille
+
+    public function myConcreteMethod(): void
+    {
+        // Do something
+    }
+}</code></pre>
+                    </section>
+                    <section>
+                        <h2>Méthodes statiques et héritages</h2>
+
+                        <pre><code>&lt;?php
+
+class P
+{
+    public static function a(): void { echo __CLASS__ }
+    public static function selfMethod(): void { self::a(); }
+    public static function lateStaticBinding: void { static::a(); }
+}
+
+class C extends P
+{
+    public static function a(): void { echo __CLASS__ }
+}
+
+var_dump(P::selfMethod()); // P
+var_dump(P::lateStaticBinding()); // C</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Interfaces</h2>
+
+                        <pre><code>&lt;?php
+
+interface AInterface // Interface marqueur
+{
+    public const FOO = 'a'; // Une interface peut contenir des constantes
+}
+
+interface BInterface
+{
+    public function foo(array $b): void; // Doit être implémentée par les classes ayant cette interface
+}
+
+interface CInterface extends AInterface, BInterface // Les interfaces supportent l'héritage multiple
+{
+}
+
+class MyCls implements AInterface {} // mot clef implements</code></pre>
+                    </section>
+
+                <section>
+                    <h2>Traits</h2>
+
+                    <p>Les traits permettent de partager des comportements (méthodes et propriétés) entre différentes classes par composition horizontale.</p>
+                    <p>En interne, le moteur PHP fait un copier/coller du trait dans la classe qui l'utilise (pas de type commun entre différentes classes utilisant un même trait).</p>
+
+                    <pre><code>&lt;?php
+
+trait DoSomething
+{
+    public function myFct(): void {}
+}
+
+class MyCls
+{
+    use DoSomething;
+}</code></pre>
+                </section>
+
+                <section>
+                    <h2>Namespaces et PSR-4</h2>
+
+                    <p>Pour éviter les collisions de noms, les namespaces peuvent être employés pour les classes, les traits et les fonctions.</p>
+                    <p>Grâce aux conventions de nommage des namespaces et des fichiers définient dans la PSR-4, de nombreuses bibliothèques dont Composer peuvent "autoloadé" les classes (permet d'utiliser une classe sans faire un <code>require</code> du fichier qui la contient).</p>
+            </section>
+
+                <section>
+                    <pre><code>&lt;?php
+
+// MyCompany/MyProject/Controller/ApiController.php
+
+namespace MyCompany\MyProject\Controller; // séparateur de namespace : \ (bizarre non ?)
+
+use Symfony\Component\HttpFoundation\Request; // Import d'une classe d'un autre namespace
+use Symfony\Component\HttpFoundation\Response;
+use Other\Library\Request as OtherRequest; // Alias
+
+class ApiController {
+    public function listAction(Request $request): Response { /* ... */ }
+}</code></pre>
+                </section>
+                    </section>
+
+                <section>
+                    <h1>Composer</h1>
+
+                    <p>Un gestionnaire de dépendance pour PHP.</p>
+                </section>
+
+                <section>
+                   <p>Un nombre très important de bibliothèques PHP - souvent de bonne qualité - existent.</p>
+
+                    <p>Composer permet de :</p>
+
+                    <ul>
+                        <li>les installer (via le dépôt public Packagist ou des dépôts privés)</li>
+                        <li>gérer leur versions et leurs mises à jour</li>
+                        <li>les "autoloadé" (et d'autoloader les classe de votre propre projet si il respecte PSR-0 ou 4)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Installation</h2>
+
+                    <code>curl -sS https://getcomposer.org/installer | php</code>
+                </section>
+
+                <section>
+                    <h2>Usage</h2>
+
+                    <p>Installation d'une bibliothèque :</p>
+
+                    <code>php composer.phar require symfony/serializer</code>
+
+                    <ul>
+                        <li><code>composer.json</code> : liste des bibliothèques a installer (en production et en développement) et configuration de l'autoloading</li>
+                        <li><code>composer.lock</code> : version exactes des bibliotèques installées pour un déploiement identique en production</li>
+                        <li><code>vendor/</code> : dossier dans lequel sont stockées les bibliothèques téléchargées (ne doit pas être versionné)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Chargement de l'autolaoder dans un projet</h2>
+
+                    <pre><code>&lt;?php
+
+                    require 'vendor/autoload.php'; // Chargement de l'autoloader Composer
+
+                    // Custom code (exemple) :
+
+                    use Symfony\Component\Serializer\Serializer;
+                    use Symfony\Component\Serializer\Encoder\JsonEncoder;
+                    use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+
+                    $encoders = array(new XmlEncoder(), new JsonEncoder());
+                    $normalizers = array(new ObjectNormalizer());
+
+                    $serializer = new Serializer($normalizers, $encoders);
+
+                    echo $serializer->serializer($myObject, 'json');</code></pre>
+                </section>
+
+                <section>
+                    C'est tout pour aujourd'hui.
+                </section>
+            </div>
+        </div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
